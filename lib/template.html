@@ -90,7 +90,7 @@
           </div>
 
         </div>
-      <div/>
+      </div>
     </div><!-- /.container -->
 
 
@@ -109,7 +109,7 @@
     <script>
     $(function() {
       function clear() {
-        $("li, a").removeClass("active")
+        $("li, a").removeClass("active");
         console.log("Cleared active selects.");
       }
 
@@ -119,29 +119,29 @@
           clear()
         }
         else {
-          clear()
+          clear();
           var assignee = $(this).attr('data-assignee');
-          console.log("Selecting items assigned to " + assignee + "...")
+          console.log("Selecting items assigned to " + assignee + "...");
           $("[data-assignee='" + assignee + "']").addClass("active")
         }
         return false;
-      })
+      });
 
       $(".file-select").click(function() {
         if($(this).hasClass("active")) {
           clear()
         }
         else {
-          clear()
+          clear();
           var file = $(this).attr('data-file');
-          console.log("Selecting items in file " + file + "...")
-          console.log("[data-file='" + file + "']")
+          console.log("Selecting items in file " + file + "...");
+          console.log("[data-file='" + file + "']");
           $("[data-file='" + file + "']").addClass("active")
         }
-      })
+      });
 
       $(".snippet-expand").click(function() {
-        var snippet = $(this).attr('data-snippet')
+        var snippet = $(this).attr('data-snippet');
         $("pre[data-snippet='" + snippet + "']").slideToggle();
         return false;
       })
