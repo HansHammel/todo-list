@@ -4,9 +4,6 @@
   "description": "Find TODOs, FIXMEs, and NOTEs in your project. Sort by assignee or file.",
   "author": "Varun Ramesh <varunramesh@live.com>",
   "license": "MIT",
-  "scripts": {
-    "test": "mocha"
-  },
   "keywords": [
     "todo",
     "fixme",
@@ -17,12 +14,14 @@
     "url": "git://github.com/rameshvarun/todo-list.git"
   },
   "dependencies": {
-    "exec-queue": "0.0.2",
-    "fs-walk": "0.0.1",
-    "gaze": "0.5.1",
-    "slug": "^0.9.1",
-    "swig": "~1",
-    "underscore": "~1"
+    "exec-queue": ">=0.0.2",
+    "fs-walk": ">=0.0.1",
+    "gaze": ">=1.1.2",
+    "mocha": ">=3.2.0",
+    "opn": ">=4.0.2",
+    "slug": ">=0.9.1",
+    "swig": ">=1",
+    "underscore": ">=1"
   },
   "preferGlobal": true,
   "engines": {
@@ -31,11 +30,15 @@
   "bin": {
     "todo-list": "./bin/todo-list"
   },
+  "scripts":{
+    "start":"cd lib && node server.js",
+    "test": "node node_modules/mocha/bin/mocha -c -S -R spec"
+  },
   "main": "lib/index.js",
   "directories": {
     "lib": "./lib"
   },
   "devDependencies": {
-    "mocha": "^2.2.4"
+    "mocha": ">=2.2.4"
   }
 }

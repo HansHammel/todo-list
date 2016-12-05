@@ -1,6 +1,7 @@
-var todolist = require("./lib");
+var todolist = require("./../lib/index.js");
 var assert = require("assert");
 
+//noinspection NodeModulesDependencies
 describe('findMarks', function() {
   it('Find TODOs, NOTES, and FIXMEs', function() {
     var result = todolist.findMarks("// TODO: This is a TODO\n// NOTE: This is a Note\n// FIXME: This is a fixme.\n");
