@@ -21,7 +21,8 @@
     "opn": ">=4.0.2",
     "slug": ">=0.9.1",
     "swig": ">=1",
-    "underscore": ">=1"
+    "underscore": ">=1",
+    "snyk": "^1.316.1"
   },
   "preferGlobal": true,
   "engines": {
@@ -30,9 +31,11 @@
   "bin": {
     "todo-list": "./bin/todo-list"
   },
-  "scripts":{
-    "start":"cd lib && node server.js",
-    "test": "node node_modules/mocha/bin/mocha -c -S -R spec"
+  "scripts": {
+    "start": "cd lib && node server.js",
+    "test": "node node_modules/mocha/bin/mocha -c -S -R spec",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "lib/index.js",
   "directories": {
@@ -40,5 +43,6 @@
   },
   "devDependencies": {
     "mocha": ">=2.2.4"
-  }
+  },
+  "snyk": true
 }
