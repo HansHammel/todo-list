@@ -22,7 +22,7 @@
     "slug": ">=4.0.2",
     "snyk": ">=1.452.0",
     "swig": ">=0.14.0",
-    "underscore": ">=1"
+    "underscore": ">=1.12.1"
   },
   "preferGlobal": true,
   "engines": {
