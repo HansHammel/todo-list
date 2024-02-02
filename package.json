@@ -21,7 +21,7 @@
     "opn": ">=5.5.0",
     "slug": ">=4.0.2",
     "snyk": ">=1.452.0",
-    "swig": ">=0.14.0",
+    "swig": ">=1.4.2",
     "underscore": ">=1"
   },
   "preferGlobal": true,
